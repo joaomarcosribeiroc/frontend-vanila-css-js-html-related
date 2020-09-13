@@ -1,0 +1,84 @@
+///This file defines a set of animations when passing the mouse over an element
+
+///Apply trembling effect to an element
+///@author João Marcos R. Carvalho
+///@access public
+///@group hover_effects
+///@example
+///  .selector{
+///     @include trembling(1, 0.2s);
+///}
+@mixin on_hover_trembling(
+  $trembling_level: 3,
+  $trembling_time: 0.3s
+  ){
+
+    &:hover{
+    @keyframes tremble_animation{
+      0%{
+        transform: rotate(5deg*$trembling_level);
+      }
+      25%{
+        transform: rotate(-5deg*$trembling_level);
+      }
+      50%{
+        transform: rotate(-5deg*$trembling_level);
+      }
+      100%{
+        transform: rotate(5deg*$trembling_level);
+      }
+    }
+    animation: tremble_animation $trembling_time;
+    animation-iteration-count: infinite;
+  }
+}
+
+@mixin on_hover_change_lightness(
+  $btn_color: green,
+  $type: dark,
+  $level: 3
+){
+  @if $type == dark{
+    &:hover{
+      background-color: lighten($btn_color, $level) !important;
+    }
+  }@else if type == light{
+    &:hover{
+      background-color: darken($btn_color, $level) !important;
+    }
+  }
+}
+
+@mixin on_hover_change_scale(
+  $scale_level: 3,
+  $scale_speed: 3s
+){
+
+  transition: all 0.2*$scale_speed;
+
+  @if $type == dark{
+    &:hover{
+      background-color: lighten($btn_color, $level) !important;
+    }
+  }@else if type == light{
+    &:hover{
+      background-color: darken($btn_color, $level) !important;
+    }
+  }
+}
+@mixin on_hover_invert_color(
+  $background-color: green,
+  $color: white,
+){
+
+  transition: all 0.2s;
+
+  background-color: $color;
+  color:$background-color;
+  border: 1px $background-color solid;
+
+  &:hover{
+    background-color: $background-color;
+    color: $color;
+  }
+}

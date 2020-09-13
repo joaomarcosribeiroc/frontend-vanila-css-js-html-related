@@ -1,0 +1,34 @@
+//TYPOGRAPHY
+  @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+  $font: Nunito, sans-serif;//Extra-light 200
+
+  *{
+    font-family: $font;
+    font-size: 20px;
+  }
+
+  //
+  body{
+      
+  }
+  //Headline
+  h1{
+    font-weight: bold;
+    font-size: 1.5rem
+  }
+  h2{
+    font-size: 1.25rem
+  }
+  h3{
+    font-size: 1rem
+  }
+  h4{
+    font-size: 0.9rem
+  }
+  h5{
+    font-size: 0.8rem
+  }
+
+  p{
+    font-size: 20px;
+  }

@@ -1,0 +1,54 @@
+@use 'slider_module_positioning.scss';
+
+.slider_wrapper {
+  overflow: hidden;
+
+  & *{
+
+    /*join paddding and margin to the content size*/
+    box-sizing: border-box;
+  }
+  .slider{
+
+    /*We’ll be using the transform property to move our carousel’s items, so
+    setting the transform-style to preserve-3d will make sure our nested elements
+    are rendered properly in 3D space.  */
+    transform-style: preserve-3d;
+    .slide{
+      /* By default we’re hiding all items until the script initiates the carousel. */
+      opacity: 0;
+      // transition: transform .5s, opacity .5s, z-index .5s;
+      transition:  all .5s;
+
+      /* Sometimes scripts can take a little bit of time to load, so let’s show the
+      initial one, make it relative so the parent container expands, and bring it to
+      the front using z-index. These styles will also apply to our active item for
+      when the carousel is being controlled. */
+      &.initial,
+      &.active{
+        opacity: 1;
+        z-index: 900;
+      }
+      &.prev {
+        z-index: 800;
+        transform: translateX(-100%); /* Move 'prev' item to the left */
+      }
+      &.next {
+        z-index: 800;
+        transform: translateX(100%); /* Move 'next' item to the right */
+
+      }
+    }
+    .slider_btn{
+      & img:hover{
+        transform: scale(1.3);
+      }
+      & img{
+        transition: transform .4s;
+      }
+      &.btn_prev{
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
