@@ -1,0 +1,93 @@
+//from design style guide
+@use 'reset';
+@use 'colors';
+@use 'typography';
+@use '../sass_modules/navbar_library';
+@use '../sass_modules/standardized_properties';
+@use '../sass_modules/buttons';
+@use '../sass_modules/hover_animations';
+
+@import 'normalize.css';
+
+@include navbar_library.navbar02;
+
+body{
+  @include standardized_properties.body_grid_01;
+  a{
+    text-decoration: none;
+  }
+
+  ul{
+    list-style: none;
+  }
+}
+
+@include navbar_library.navbar02($navbar_background-color: colors.$neutral_color01, $color: colors.$neutral_color02, $text_transform: none, $font-size: 1.1rem, $margin_bottom_weight: 0);
+
+header{
+  padding: 0;
+  .navbar02{
+    padding-right: 10%;
+    .navbar_links{
+      height: 100%;
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
+
+.navbar02{
+  @include standardized_properties.box-shadow;
+}
+
+div#appealing_button{
+  grid-column: 1/13;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+    button{
+      @include buttons.appealing_button_01($btn_size:3);
+      @include hover_animations.on_hover_invert_color(
+        $background-color: colors.$primary_color,
+        $color: colors.$neutral_color01,
+      );
+      font-size: 1.5rem;
+      padding: 1ex 6ex;
+    }
+}
+
+footer{
+  padding: 1%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  div{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    a{
+      color: white;
+    }
+    ul{
+      display: flex;
+      justify-content: space-between;
+      min-width: 25%;
+      padding: 0;
+      li{
+        display: inline-block;
+      }
+    }
+    img{
+      width: 80px;
+      background-color: white;
+    }
+  }
+}
+
+.accent_text{
+  background-color: colors.$accent_color;
+  font-weight: bolder;
+  font-size: 1em;
+}

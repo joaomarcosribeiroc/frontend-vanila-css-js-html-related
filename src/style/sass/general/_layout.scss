@@ -1,0 +1,102 @@
+/*As a general file, this file will only take care of styling fixed visual components
+ *like bars, headers, footers and main contents panels.
+ *Restrict properties that dictate position and and size(from outter margins) of
+  components like:
+  **height
+  **width
+  **margin
+  **display
+  **flex module
+  **grid module
+*/
+
+//USES AND IMPORTS
+@use 'standardized_style_properties' as std_prop;
+@use '../sass_modules/typography';
+
+//STYLING
+body{
+  &, & *
+  {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box !important;
+  }
+}
+
+.header
+{
+  &, & *
+  {
+    margin: 0;
+    padding: 0;
+  }
+  &>*{
+    position: relative;
+  }
+
+  height: 50px;
+  width: 100%;
+
+  //Flex module
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+
+  $horizontal_margin: 20px;
+
+  .navbar_logo{
+    height: 50px;
+    margin-left: $horizontal_margin;
+  }
+  .div_navbar02{
+    width: 30%;
+    margin-right: $horizontal_margin;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    transition: 1s all ease;
+
+    .ul_navbar_links{
+      //Flex Module
+      display: flex;
+      justify-content: space-between;
+
+      list-style: none;
+      white-space:nowrap;
+
+      .li_link_item{
+        display: inline-block;
+        li{
+          padding: auto;
+          top: 50%;
+        }
+      }
+    }
+  }
+}
+
+.section_wrapper{
+}
+
+.footer{
+    div{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+      ul{
+      display: flex;
+      justify-content: space-between;
+      min-width: 25%;
+      li{
+        display: inline-block;
+      }
+    }
+    img{
+      width: 80px;
+    }
+  }
+  }

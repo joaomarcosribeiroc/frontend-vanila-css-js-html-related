@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <meta name="Author" content="Made by 'tree'">
+ <meta name="GENERATOR" content="$Version: $ tree v1.8.0 (c) 1996 - 2018 by Steve Baker, Thomas Moore, Francesc Rocher, Florian Sesser, Kyosuke Tokoro $">
+ <title>Directory Tree</title>
+ <style type="text/css">
+  <!-- 
+  BODY { font-family : ariel, monospace, sans-serif; }
+  P { font-weight: normal; font-family : ariel, monospace, sans-serif; color: black; background-color: transparent;}
+  B { font-weight: normal; color: black; background-color: transparent;}
+  A:visited { font-weight : normal; text-decoration : none; background-color : transparent; margin : 0px 0px 0px 0px; padding : 0px 0px 0px 0px; display: inline; }
+  A:link    { font-weight : normal; text-decoration : none; margin : 0px 0px 0px 0px; padding : 0px 0px 0px 0px; display: inline; }
+  A:hover   { color : #000000; font-weight : normal; text-decoration : underline; background-color : yellow; margin : 0px 0px 0px 0px; padding : 0px 0px 0px 0px; display: inline; }
+  A:active  { color : #000000; font-weight: normal; background-color : transparent; margin : 0px 0px 0px 0px; padding : 0px 0px 0px 0px; display: inline; }
+  .VERSION { font-size: small; font-family : arial, sans-serif; }
+  .NORM  { color: black;  background-color: transparent;}
+  .FIFO  { color: purple; background-color: transparent;}
+  .CHAR  { color: yellow; background-color: transparent;}
+  .DIR   { color: blue;   background-color: transparent;}
+  .BLOCK { color: yellow; background-color: transparent;}
+  .LINK  { color: aqua;   background-color: transparent;}
+  .SOCK  { color: fuchsia;background-color: transparent;}
+  .EXEC  { color: green;  background-color: transparent;}
+  -->
+ </style>
+</head>
+<body>
+	<h1>Directory Tree</h1><p>
+	<a href="front_end">front_end</a><br>
+	├── <a href="front_end/assets-prod/">assets-prod</a><br>
+	│   ├── <a href="front_end/assets-prod/index.html">index.html</a><br>
+	│   ├── <a href="front_end/assets-prod/media/">media</a><br>
+	│   │   ├── <a href="front_end/assets-prod/media/general/">general</a><br>
+	│   │   │   ├── <a href="front_end/assets-prod/media/general/github.png">github.png</a><br>
+	│   │   │   ├── <a href="front_end/assets-prod/media/general/instagram.png">instagram.png</a><br>
+	│   │   │   ├── <a href="front_end/assets-prod/media/general/logo.png">logo.png</a><br>
+	│   │   │   └── <a href="front_end/assets-prod/media/general/twitter.png">twitter.png</a><br>
+	│   │   └── <a href="front_end/assets-prod/media/index/">index</a><br>
+	│   │   &nbsp;&nbsp;&nbsp; └── <a href="front_end/assets-prod/media/index/images/">images</a><br>
+	│   │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="front_end/assets-prod/media/index/images/arrow.png">arrow.png</a><br>
+	│   │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="front_end/assets-prod/media/index/images/css.png">css.png</a><br>
+	│   │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="front_end/assets-prod/media/index/images/hibernate.png">hibernate.png</a><br>
+	│   │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="front_end/assets-prod/media/index/images/html.png">html.png</a><br>
+	│   │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="front_end/assets-prod/media/index/images/java.png">java.png</a><br>
+	│   │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="front_end/assets-prod/media/index/images/js.png">js.png</a><br>
+	│   │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="front_end/assets-prod/media/index/images/mysql.png">mysql.png</a><br>
+	│   │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="front_end/assets-prod/media/index/images/slider_appealing/">slider_appealing</a><br>
+	│   │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │   ├── <a href="front_end/assets-prod/media/index/images/slider_appealing/Modern%20Visual.png">Modern Visual.png</a><br>
+	│   │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │   ├── <a href="front_end/assets-prod/media/index/images/slider_appealing/Professionalism.png">Professionalism.png</a><br>
+	│   │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │   ├── <a href="front_end/assets-prod/media/index/images/slider_appealing/Responsiveness.png">Responsiveness.png</a><br>
+	│   │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │   └── <a href="front_end/assets-prod/media/index/images/slider_appealing/Security.png">Security.png</a><br>
+	│   │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; └── <a href="front_end/assets-prod/media/index/images/spring.png">spring.png</a><br>
+	│   ├── <a href="front_end/assets-prod/script/">script</a><br>
+	│   │   └── <a href="front_end/assets-prod/script/script">script</a><br>
+	│   └── <a href="front_end/assets-prod/style/">style</a><br>
+	│   &nbsp;&nbsp;&nbsp; └── <a href="front_end/assets-prod/style/sass/">sass</a><br>
+	│   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="front_end/assets-prod/style/sass/aux_layout.css">aux_layout.css</a><br>
+	│   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="front_end/assets-prod/style/sass/general_styles/">general_styles</a><br>
+	│   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │   └── <a href="front_end/assets-prod/style/sass/general_styles/style.css">style.css</a><br>
+	│   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; └── <a href="front_end/assets-prod/style/sass/page_specific_styles/">page_specific_styles</a><br>
+	│   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; └── <a href="front_end/assets-prod/style/sass/page_specific_styles/index/">index</a><br>
+	│   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; └── <a href="front_end/assets-prod/style/sass/page_specific_styles/index/index.css">index.css</a><br>
+	├── <a href="front_end/directory">directory</a><br>
+	├── <a href="front_end/front_end_dir_structure.html">front_end_dir_structure.html</a><br>
+	├── <a href="front_end/gulpfile.js">gulpfile.js</a><br>
+	├── <a href="front_end/package.json">package.json</a><br>
+	├── <a href="front_end/package-lock.json">package-lock.json</a><br>
+	├── <a href="front_end/project-meta-information/">project-meta-information</a><br>
+	│   ├── <a href="front_end/project-meta-information/base-initial-file-directory-structure.html">base-initial-file-directory-structure.html</a><br>
+	│   ├── <a href="front_end/project-meta-information/project-descriptor.css">project-descriptor.css</a><br>
+	│   ├── <a href="front_end/project-meta-information/project-descriptor.html">project-descriptor.html</a><br>
+	│   └── <a href="front_end/project-meta-information/wireframes">wireframes</a><br>
+	└── <a href="front_end/src/">src</a><br>
+	&nbsp;&nbsp;&nbsp; ├── <a href="front_end/src/index.html">index.html</a><br>
+	&nbsp;&nbsp;&nbsp; ├── <a href="front_end/src/media/">media</a><br>
+	&nbsp;&nbsp;&nbsp; │   ├── <a href="front_end/src/media/general/">general</a><br>
+	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="front_end/src/media/general/github.png">github.png</a><br>
+	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="front_end/src/media/general/instagram.png">instagram.png</a><br>
+	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="front_end/src/media/general/logo.png">logo.png</a><br>
+	&nbsp;&nbsp;&nbsp; │   │   └── <a href="front_end/src/media/general/twitter.png">twitter.png</a><br>
+	&nbsp;&nbsp;&nbsp; │   └── <a href="front_end/src/media/index/">index</a><br>
+	&nbsp;&nbsp;&nbsp; │   &nbsp;&nbsp;&nbsp; └── <a href="front_end/src/media/index/images/">images</a><br>
+	&nbsp;&nbsp;&nbsp; │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="front_end/src/media/index/images/arrow.png">arrow.png</a><br>
+	&nbsp;&nbsp;&nbsp; │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="front_end/src/media/index/images/css.png">css.png</a><br>
+	&nbsp;&nbsp;&nbsp; │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="front_end/src/media/index/images/hibernate.png">hibernate.png</a><br>
+	&nbsp;&nbsp;&nbsp; │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="front_end/src/media/index/images/html.png">html.png</a><br>
+	&nbsp;&nbsp;&nbsp; │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="front_end/src/media/index/images/java.png">java.png</a><br>
+	&nbsp;&nbsp;&nbsp; │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="front_end/src/media/index/images/js.png">js.png</a><br>
+	&nbsp;&nbsp;&nbsp; │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="front_end/src/media/index/images/mysql.png">mysql.png</a><br>
+	&nbsp;&nbsp;&nbsp; │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="front_end/src/media/index/images/slider_appealing/">slider_appealing</a><br>
+	&nbsp;&nbsp;&nbsp; │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │   ├── <a href="front_end/src/media/index/images/slider_appealing/Modern%20Visual.png">Modern Visual.png</a><br>
+	&nbsp;&nbsp;&nbsp; │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │   ├── <a href="front_end/src/media/index/images/slider_appealing/Professionalism.png">Professionalism.png</a><br>
+	&nbsp;&nbsp;&nbsp; │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │   ├── <a href="front_end/src/media/index/images/slider_appealing/Responsiveness.png">Responsiveness.png</a><br>
+	&nbsp;&nbsp;&nbsp; │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │   └── <a href="front_end/src/media/index/images/slider_appealing/Security.png">Security.png</a><br>
+	&nbsp;&nbsp;&nbsp; │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; └── <a href="front_end/src/media/index/images/spring.png">spring.png</a><br>
+	&nbsp;&nbsp;&nbsp; ├── <a href="front_end/src/scripts/">scripts</a><br>
+	&nbsp;&nbsp;&nbsp; │   └── <a href="front_end/src/scripts/index/">index</a><br>
+	&nbsp;&nbsp;&nbsp; │   &nbsp;&nbsp;&nbsp; └── <a href="front_end/src/scripts/index/slider_module.js">slider_module.js</a><br>
+	&nbsp;&nbsp;&nbsp; └── <a href="front_end/src/style/">style</a><br>
+	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="front_end/src/style/Poppins-Regular.ttf">Poppins-Regular.ttf</a><br>
+	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; └── <a href="front_end/src/style/sass/">sass</a><br>
+	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="front_end/src/style/sass/aux_layout.scss">aux_layout.scss</a><br>
+	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="front_end/src/style/sass/general_styles/">general_styles</a><br>
+	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │   ├── <a href="front_end/src/style/sass/general_styles/_colors.scss">_colors.scss</a><br>
+	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │   ├── <a href="front_end/src/style/sass/general_styles/_reset.scss">_reset.scss</a><br>
+	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │   ├── <a href="front_end/src/style/sass/general_styles/style.scss">style.scss</a><br>
+	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │   └── <a href="front_end/src/style/sass/general_styles/_typography.scss">_typography.scss</a><br>
+	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="front_end/src/style/sass/page_specific_styles/">page_specific_styles</a><br>
+	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │   └── <a href="front_end/src/style/sass/page_specific_styles/index/">index</a><br>
+	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │   &nbsp;&nbsp;&nbsp; ├── <a href="front_end/src/style/sass/page_specific_styles/index/_index_layout_level_01.scss">_index_layout_level_01.scss</a><br>
+	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │   &nbsp;&nbsp;&nbsp; ├── <a href="front_end/src/style/sass/page_specific_styles/index/_index_layout_level_02.scss">_index_layout_level_02.scss</a><br>
+	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │   &nbsp;&nbsp;&nbsp; ├── <a href="front_end/src/style/sass/page_specific_styles/index/index.scss">index.scss</a><br>
+	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │   &nbsp;&nbsp;&nbsp; ├── <a href="front_end/src/style/sass/page_specific_styles/index/_slider_module_positioning.scss">_slider_module_positioning.scss</a><br>
+	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │   &nbsp;&nbsp;&nbsp; └── <a href="front_end/src/style/sass/page_specific_styles/index/_slider_module.scss">_slider_module.scss</a><br>
+	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; └── <a href="front_end/src/style/sass/partials_library/">partials_library</a><br>
+	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="front_end/src/style/sass/partials_library/_buttons.scss">_buttons.scss</a><br>
+	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="front_end/src/style/sass/partials_library/_hover_animations.scss">_hover_animations.scss</a><br>
+	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="front_end/src/style/sass/partials_library/_navbar_library.scss">_navbar_library.scss</a><br>
+	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; └── <a href="front_end/src/style/sass/partials_library/_standardized_properties.scss">_standardized_properties.scss</a><br>
+	<br><br>
+	</p>
+	<p>
+
+27 directories, 63 files
+	<br><br>
+	</p>
+	<hr>
+	<p class="VERSION">
+		 tree v1.8.0 © 1996 - 2018 by Steve Baker and Thomas Moore <br>
+		 HTML output hacked and copyleft © 1998 by Francesc Rocher <br>
+		 JSON output hacked and copyleft © 2014 by Florian Sesser <br>
+		 Charsets / OS/2 support © 2001 by Kyosuke Tokoro
+	</p>
+</body>
+</html>

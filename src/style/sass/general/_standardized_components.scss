@@ -1,0 +1,8 @@
+//USES AND IMPORTS
+@use 'standardized_style_properties' as std_prop;
+
+//STYLING
+
+.panel{
+  @include std_prop.padding;
+}

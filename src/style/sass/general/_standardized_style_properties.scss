@@ -1,0 +1,19 @@
+@mixin padding{
+    padding: 1rem;
+}
+
+@mixin border-radius{
+  border-radius: 20px;
+}
+
+@mixin box-shadow{
+  box-shadow: 1px 1px 10px lighten(grey, 20),
+}
+
+@mixin body_grid_01($row_thickness:50px){
+  //The grid module
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: $row_thickness;
+  grid-gap: 5%;
+}

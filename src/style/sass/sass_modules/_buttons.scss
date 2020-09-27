@@ -1,0 +1,47 @@
+//File description:This is a Partial file for defining stuff for out project
+
+@mixin general_btn(
+  $btn_size: 3,
+  $btn_background-color: green
+){
+    cursor: pointer !important;
+    box-sizing: content-box;
+    padding: 1ex 1ex;
+    height: 2ex*$btn_size;
+    width: auto;
+    background-color: $btn_background-color;
+
+    //Centering text vertically
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+@mixin btn-retangular_b1(
+  $btn_size: 3,
+  $btn_background-color: green
+){
+    @include general_btn($btn_size:$btn_size, $btn_background-color:$btn_background-color);
+    border-radius: 10% !important;
+}
+
+@mixin btn-rounded_b1(
+    $btn_size: 3,
+    $btn_background-color: green
+){
+  @include general_btn($btn_size:$btn_size, $btn_background-color:$btn_background-color);
+  height: 1ex*$btn_size;
+  width: auto;
+  border-radius: 40ex !important;
+}
+
+@mixin appealing_button_01(
+    $btn_size: 3,
+    $btn_background-color: green,
+    $btn_color: white,
+){
+  @include btn-rounded_b1($btn_size:$btn_size, $btn_background-color:$btn_background-color);
+  border: none;
+  color: $btn_color;
+}

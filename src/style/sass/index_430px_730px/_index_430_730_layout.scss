@@ -1,0 +1,71 @@
+@use '../general/standardized_style_properties' as std_prop;
+@use '../sass_modules/buttons' as buttons;
+@use '../sass_modules/hover_animations' as hover_animations;
+@use '../sass_modules/colors' as colors;
+
+@media only screen and (min-width:430px) and (max-width: 730px) {
+
+.section_wrapper{
+  section#appealing
+  {
+    #div_appealing_inner
+    {
+      h1
+      {
+      }
+      .div_slider_wrapper
+      {
+        .slider
+        {
+          img
+          {
+          }
+          .div_slider_btn
+          {
+          }
+        }
+      }
+    }
+  }
+
+  section#paragraph{
+    p#a_word{
+      font-size: 1.3rem;
+      // padding-left: 1%;
+      // border-left: 3px colors.$primary_color solid;
+    }
+  }
+
+
+  div#appealing_button{
+        button{
+          @include buttons.appealing_button_01($btn_size:1);
+          @include hover_animations.on_hover_invert_color(
+            $background-color: colors.$primary_color,
+            $color: colors.$neutral_color01,
+          );
+          font-size: 1.1rem;
+          padding: 3ex 6ex;
+        }
+  }
+  section#clients{
+  }
+
+
+  section#stack{
+    h1{
+    }
+    ul{
+      display: flex;
+      flex-direction: column;
+      li{
+        flex-shrink: 0;
+        img
+        {
+          width: 20%;
+        }
+        }
+      }
+    }
+}
+}

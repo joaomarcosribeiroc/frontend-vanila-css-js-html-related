@@ -1,0 +1,80 @@
+/*This file will only take care of styling the appearance of the components
+ *like colors, borders...
+ */
+
+//USES AND IMPORTS
+@use '../general/standardized_style_properties' as std_prop;
+@use '../sass_modules/buttons' as buttons;
+@use '../sass_modules/hover_animations' as hover_animations;
+@use '../sass_modules/colors' as colors;
+
+//STYLING
+section{
+  &#stack{
+    h1{
+      font-weight: 400;
+    }
+    ul{
+      li{
+        @include std_prop.box-shadow;
+        &:nth-child(odd){
+          border-bottom: 2px colors.$primary_color solid;
+          border-right: 2px colors.$primary_color solid;
+        }
+        &:nth-child(even){
+          border-bottom: 2px colors.$primary_color_shade_01 solid;
+          border-right: 2px colors.$primary_color_shade_01 solid;
+        }
+
+        .stack_footer{
+          // background-color: colors.$primary_color_shade_01;
+          // border-right: 1px solid black;
+          // border-bottom: 1px solid black;
+          border-bottom: 2px colors.$primary_color_shade_01 solid;
+          border-right: 2px colors.$primary_color solid;
+        }
+      }
+    }
+  }
+  &#appealing{
+    padding: 1rem;
+  }
+
+  &#paragraph{
+    @include std_prop.box-shadow;
+    @include std_prop.border-radius;
+    @include std_prop.box-shadow;
+    @include std_prop.padding;
+  }
+}
+
+p#a_word{
+  font-size: 2rem;
+  padding-left: 1%;
+  border-left: 3px colors.$primary_color solid;
+}
+
+div#appealing_button{
+  grid-column: 1/13;
+  justify-content: center;
+    button{
+      @include buttons.appealing_button_01($btn_size:5);
+      @include hover_animations.on_hover_invert_color(
+        $background-color: colors.$primary_color,
+        $color: colors.$neutral_color01,
+      );
+      &:hover{
+        font-weight: bolder;
+      }
+      font-size: 1.5rem;
+      padding: 1ex 6ex;
+    }
+}
+.div_slider_btn
+{
+  @include std_prop.box-shadow;
+  &:hover{
+    box-shadow: none;
+  }
+  transition: all 1s ease;
+}

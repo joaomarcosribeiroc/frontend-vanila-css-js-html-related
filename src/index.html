@@ -6,42 +6,57 @@
   <meta name="description" content="Joao Marcos is a fullstack developer building frontend and backend projects in a professional manner">
   <meta name="author" content="Joao Marcos">
 
-  <link rel="stylesheet" href="../assets-prod/style/sass/general_styles/style.css">
-  <link rel="stylesheet" href="../assets-prod/style/sass/page_specific_styles/index/index.css">
-  <link rel="stylesheet" href="style/css/aux_layout.css">
+  <link rel="stylesheet" href="style/sass/general/general.css">
+  <link rel="stylesheet" href="style/sass/general_430px_730px/general_430_730.css">
+  <link rel="stylesheet" href="style/sass/general_730px_1200px/general_730_1200.css">
+  <link rel="stylesheet" href="style/sass/general_1200px_plus/general_1200plus.css">
+
+  <link rel="stylesheet" href="style/sass/index/index.css">
+  <link rel="stylesheet" href="style/sass/index_1200px_plus/index_1200plus.css">
+  <link rel="stylesheet" href="style/sass/aux_layout.css">
+  <!--
+  <link rel="stylesheet" href="style/sass/index_430px_730px/index_430_730.css">
+  <link rel="stylesheet" href="style/sass/index_730px_1200px/index_730_1200.css">
+
+  <link rel="stylesheet" href="../assets-prod/style/sass/page_specific_styles/index/index.css"
+  -->
 
 </head>
 <body>
-  <header>
-    <nav>
-      <div class="navbar02">
-        <img src="../assets-prod/media/general/logo.png" alt="logo" class="navbar_logo">
-        <ul class="navbar_links">
-          <li class="link_item"> <a href=""> Home</a></li>
-          <li class="link_item"> <a href=""> Projects</a></li>
-          <li class="link_item"> <a href=""> Stack</a></li>
-          <li class="link_item"> <a href=""> Contact</a></li>
+  <header class="header">
+    <div class="logo_wrapper">
+      <img src="../assets-prod/media/general/logo.png" alt="logo" class="navbar_logo">
+    </div>
+    <div class="div_navbar02">
+      <!-- <nav> -->
+        <ul class="ul_navbar_links">
+          <li class="li_link_item"><a href="">Home</a></li>
+          <li class="li_link_item"><a href="">Projects</a></li>
+          <li class="li_link_item"><a href="">Stack</a></li>
+          <li class="li_link_item"><a href="">Contact</a></li>
         </ul>
-      </div>
-    </nav>
-    <h1>This site is under construction, contact me for more information. :)</h1>
+      <!-- </nav> -->
+    </div>
   </header>
+  <!-- <h1>This site is under construction, contact me for more information. :)</h1> -->
 
-
+  <section class="section_wrapper">
   <section id="appealing">
+  <div id="div_appealing_inner">
     <h1>Why should you hire me to build your site</h1>
-    <div class="slider_wrapper">
+    <div class="div_slider_wrapper">
       <div class="slider">
         <img class="slide" src="../assets-prod/media/index/images/slider_appealing/Modern Visual.png" alt="modern visual">
         <img class="slide" src="../assets-prod/media/index/images/slider_appealing/Professionalism.png" alt="professionalism">
         <img class="slide" src="../assets-prod/media/index/images/slider_appealing/Responsiveness.png" alt="responsiveness">
         <img class="slide" src="../assets-prod/media/index/images/slider_appealing/Security.png" alt="security">
-        <div class="slider_btn btn_next"><img src="../assets-prod/media/index/images/arrow.png" alt=""></div>
-        <div class="slider_btn btn_prev"><img src="../assets-prod/media/index/images/arrow.png" alt=""></div>
+        <div class="div_slider_btn btn_next"><img src="../assets-prod/media/index/images/arrow.png" alt=""></div>
+        <div class="div_slider_btn btn_prev"><img src="../assets-prod/media/index/images/arrow.png" alt=""></div>
       </div>
     </div>
-
+  </div>
   </section>
+
   <section id="paragraph">
     <h1>A word about being a freelancer developer</h1>
     <p id="a_word">I think that one of the greatest previlege of developer is to be part of
@@ -52,72 +67,94 @@
     </p>
   </section>
 
-  <section id="clients">
+  <!-- <section id="clients">
     <h1>Business that already made the right decision</h1>
-  </section>
+  </section> -->
 
   <div id="appealing_button">
-    <button type="button" name="What you have in mind">Tell me what do you have in mind</button>
+    <button type="button" name="What you have in mind">Tell me what you have in mind</button>
   </div>
-  <section id="stack">
+
+  <section id="stack" class="panel">
     <h1>This are some great tecnologies I've been working with</h1>
     <ul>
       <li><a href="">
           <img src="../assets-prod/media/index/images/html.png" alt="">
+          <footer class="stack_footer">
           <text class="tech">HTML</text>
-          <tech class="version">5</tech>
+          <text class="version"> 5</text>
+        </footer>
         </a></li>
       <li><a href="">
           <img src="../assets-prod/media/index/images/css.png" alt="">
+          <footer class="stack_footer">
           <text class="tech">CSS</text>
-          <tech class="version">3</tech>
+          <text class="version"> 3</text>
+        </footer>
         </a></li>
       <li><a href="">
           <img src="../assets-prod/media/index/images/js.png" alt="">
+          <footer class="stack_footer">
           <text class="tech">Javascript</text>
-          <tech class="version"></tech>
+          <text class="version"> </text>
+        </footer>
         </a></li>
       <li><a href="">
           <img src="../assets-prod/media/index/images/java.png" alt="">
+          <footer class="stack_footer">
           <text class="tech">Java Servlet</text>
-          <tech class="version">4.0</tech>
+          <text class="version"> 4.0</text>
+        </footer>
         </a></li>
       <li><a href="">
           <img src="../assets-prod/media/index/images/java.png" alt="">
+          <footer class="stack_footer">
           <text class="tech">JavaServer Pages</text>
-          <tech class="version">2.1</tech>
+          <text class="version"> 2.1</text>
+        </footer>
         </a></li>
       <li><a href="">
           <img src="../assets-prod/media/index/images/java.png" alt="">
+          <footer class="stack_footer">
           <text class="tech">Java Persistence API</text>
-          <tech class="version">2.2</tech>
+          <text class="version"> 2.2</text>
+        </footer>
         </a></li>
       <li><a href="">
           <img src="../assets-prod/media/index/images/java.png" alt="">
-          <text class="tech">Java Database Connectivity (JDBC) API</text>
-          <tech class="version">4.3</tech>
+          <footer class="stack_footer">
+          <text class="tech" title="Java Database Connectivity API">JDBC API</text>
+          <text class="version"> 4.3</text>
+        </footer>
         </a></li>
       <li><a href="">
           <img src="../assets-prod/media/index/images/mysql.png" alt="">
+          <footer class="stack_footer">
           <text class="tech">MySQL</text>
-          <tech class="version">8</tech>
+          <text class="version"> 8</text>
+        </footer>
         </a></li>
       <li><a href="">
           <img src="../assets-prod/media/index/images/spring.png" alt="">
+          <footer class="stack_footer">
           <text class="tech">Spring Framework*</text>
-          <tech class="version"></tech>
+          <text class="version"> </text>
+        </footer>
         </a></li>
       <li><a href="">
           <img src="../assets-prod/media/index/images/hibernate.png" alt="">
+          <footer class="stack_footer">
           <text class="tech">Hibernate ORM*</text>
-          <tech class="version"></tech>
+          <text class="version"> </text>
+        </footer>
         </a></li>
-      <li>*Technologies I'll be working with soon.</li>
+      <li>*textnologies I'll be working with soon.</li>
     </ul>
 
   </section>
+</section>
 
-  <footer>
+  <footer class="footer">
     <div>
       <text><a href="contact">Tell me what you want? What is your project?</a></text><br>
       <text>Find me here</text>
@@ -128,6 +165,6 @@
       </ul>
     </div>
   </footer>
-  <script  src="../assets-prod/script/index/slider_module-min.js"></script>
+  <script  src="../assets-prod/script/index/scripts-min.js"></script>
 </body>
 </html>

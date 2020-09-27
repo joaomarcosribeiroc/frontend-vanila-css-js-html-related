@@ -1,0 +1,33 @@
+/*DESCRIPTION
+*/
+
+//USES AND IMPORTS
+@use 'standardized_style_properties' as std_prop;
+@use '../sass_modules/typography';
+
+//STYLING
+body
+{
+  a:link,
+  a:visited,
+  a:hover,
+  a:active{
+    list-style: none;
+    text-decoration: none;
+    color: black;
+  }
+
+  .header{
+    @include std_prop.box-shadow;
+  }
+  .footer{
+
+    @include std_prop.padding;
+    & *, a{
+      color: white;
+    }
+    background-color: black;
+    margin-bottom: 0;
+  }
+
+}

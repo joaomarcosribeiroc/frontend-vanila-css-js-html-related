@@ -1,0 +1,59 @@
+@use '../general/standardized_style_properties' as std_prop;
+
+.section_wrapper{
+
+  &>*{
+    margin: 25px 0;
+  }
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  section#appealing
+  {
+
+    #div_appealing_inner
+    {
+      width: 100%;
+
+      // Flex Module
+      display: flex;
+      flex-direction: column;
+
+      h1
+      {
+        width: 100%;
+      }
+      .div_slider_wrapper
+      {
+        .slider
+        {
+          img
+          {
+            width: 100%;
+            height:auto;
+          }
+          .div_slider_btn
+          {
+            width: 5%;
+          }
+        }
+      }
+    }
+  }
+  section#paragraph
+  {
+    width: 70%;
+  }
+  div#appealing_button
+  {
+    display: flex;
+    justify-content: center;
+
+  }
+  section#stack
+  {
+  }
+}

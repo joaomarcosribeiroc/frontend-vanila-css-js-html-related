@@ -1,0 +1,40 @@
+/*As a general file, this file will only take care of styling fixed visual components
+ *like bars, headers, footers and main contents panels.
+ *Restrict properties that dictate position and and size(from outter margins) of
+  components like:
+  **height
+  **width
+  **margin
+  **display
+  **flex module
+  **grid module
+*/
+
+//USES AND IMPORTS
+
+@media only screen and (min-width: 430px) and (max-width: 730px) {
+//STYLING
+body{
+}
+
+.header
+{
+  .navbar_logo{
+    width: 20%;
+    transition: 1s width;
+  }
+  .div_navbar02{
+    width: 60%;
+
+    .ul_navbar_links{
+      .li_link_item{
+
+      }
+    }
+  }
+}
+
+.footer{
+
+}
+}

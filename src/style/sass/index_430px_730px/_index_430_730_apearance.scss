@@ -1,0 +1,45 @@
+/*This file will only take care of styling the appearance of the components
+ *like colors, borders...
+ */
+
+//USES AND IMPORTS
+@use '../general/standardized_style_properties' as std_prop;
+@use '../sass_modules/buttons' as buttons;
+@use '../sass_modules/hover_animations' as hover_animations;
+@use '../sass_modules/colors' as colors;
+
+
+//STYLING
+@media only screen and (min-width: 430px) and (max-width: 730px) {
+section{
+  &#stack{
+    h1{
+    }
+    ul{
+      li{
+        &:nth-child(odd){
+        }
+        &:nth-child(odd){
+        }
+        &:nth-child(even){
+        }
+      }
+    }
+  }
+  &#appealing{
+  }
+
+  &#paragraph{
+  }
+}
+
+p#a_word{
+}
+
+div#appealing_button{
+    button{
+      &:hover{
+      }
+    }
+}
+}
