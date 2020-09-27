@@ -5,6 +5,8 @@ const gulp_htmlmin = require('gulp-htmlmin');
 const gulp_concat = require('gulp-concat');
 const gulp_minify = require('gulp-minify');
 const gulp_imagemin = require('gulp-imagemin');
+const gulp_replace = require('gulp-replace');
+
 const del = require('del');
 
 gulp_sass.compiler = require('sass');
@@ -61,6 +63,7 @@ gulp.task('delete', () => {
 const createDocFolder = () => {
   del(['./docs/*']);
   return gulp.src('assets-prod/**/*.*')
+        .pipe(gulp_replace('../assets-prod/', ''))
         .pipe(gulp.dest('docs'));
 }
 gulp.task('createDoc', createDocFolder);
