@@ -81,5 +81,5 @@ const watchSass = gulp.watch(
 
 
 //Organizing tasks executions using series() and parallel API
-exports.default = gulp.series('delete',gulp.parallel('html', 'script', 'compileSass', 'media'));
+exports.default = gulp.series('delete',gulp.parallel('html', 'script', 'compileSass', 'media'), 'createDoc');
 exports.watchSass = this.watchSass;
