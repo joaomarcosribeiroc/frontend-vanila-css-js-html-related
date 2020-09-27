@@ -57,6 +57,14 @@ gulp.task('delete', () => {
     return del(['./assets-prod/*']);
 })
 
+//Create GitHub Pages doc folder
+const createDocFolder = () => {
+  del(['./docs/*']);
+  return gulp.src('assets-prod/**/*.*')
+        .pipe(gulp.dest('docs'));
+}
+gulp.task('createDoc', createDocFolder);
+
 //Watch
 const watchSass = gulp.watch(
   ['src/**/*.scss','src/**/*.html'],
@@ -64,7 +72,10 @@ const watchSass = gulp.watch(
     copyHTML,
     delFinalSassTask,
     compileSassTask,
+    createDocFolder
   ));
+
+
 
 //Organizing tasks executions using series() and parallel API
 exports.default = gulp.series('delete',gulp.parallel('html', 'script', 'compileSass', 'media'));
