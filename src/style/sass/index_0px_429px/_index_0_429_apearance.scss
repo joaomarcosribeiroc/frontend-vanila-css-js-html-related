@@ -10,10 +10,11 @@
 
 
 //STYLING
-@media only screen and (min-width: 430px) and (max-width: 730px) {
+@media only screen and (min-device-width: 0px) and (max-device-width: 429px) {
 section{
   &#stack{
     h1{
+      font-size: 2.5rem;
     }
     ul{
       li{
@@ -25,7 +26,14 @@ section{
         }
       }
     }
+    .stack_footer{
+      text-align: center;
+      &>*{
+        font-size: 4rem;
+      }
+    }
   }
+
   &#appealing{
   }
 
@@ -34,14 +42,22 @@ section{
 }
 
 p#a_word{
-  font-size: 0.1rem;
+  font-size: 3rem !important;
 }
 
 div#appealing_button{
-    button{
-      &:hover{
-      }
+  button{
+    @include buttons.appealing_button_01($btn_size:9);
+    @include hover_animations.on_hover_invert_color(
+      $background-color: colors.$primary_color,
+      $color: colors.$neutral_color01,
+    );
+    &:hover{
+      font-weight: bolder;
     }
+    font-size: 2.5rem;
+    padding: 1ex 6ex;
+  }
 }
 
 div#div_appealing_inner{

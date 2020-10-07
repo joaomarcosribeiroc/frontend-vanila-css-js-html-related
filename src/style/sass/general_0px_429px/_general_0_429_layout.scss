@@ -1,0 +1,37 @@
+/*As a general file, this file will only take care of styling fixed visual components
+ *like bars, headers, footers and main contents panels.
+ *Restrict properties that dictate position and and size(from outter margins) of
+  components like:
+  **height
+  **width
+  **margin
+  **display
+  **flex module
+  **grid module
+*/
+
+//USES AND IMPORTS
+
+@media only screen and (min-device-width: 0px) and (max-device-width: 429px) {
+//STYLING
+body{
+}
+
+.header
+{
+  $horizontal_margin: 20px;
+  $header_height:  200px;
+
+  height: $header_height;
+
+  .navbar_logo{
+    height: $header_height;
+    margin-left: $horizontal_margin;
+  }
+}
+
+.section_wrapper{
+
+}
+
+}

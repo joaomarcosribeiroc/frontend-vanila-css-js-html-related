@@ -1,0 +1,25 @@
+/*DESCRIPTION
+*/
+
+//USES AND IMPORTS
+@use '../general/standardized_style_properties' as std_prop;
+
+@media only screen and (min-device-width: 0px) and (max-device-width: 429px) {
+
+//STYLING
+body
+{
+  .header{
+  }
+  .footer{
+    *{
+      font-size: 2.5rem !important;
+    }
+    li{
+      @include std_prop.box-shadow;
+      @include std_prop.padding;
+    }
+  }
+
+}
+}

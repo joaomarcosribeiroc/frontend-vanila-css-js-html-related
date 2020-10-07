@@ -1,24 +1,19 @@
-
-header{
-  // border: 1px solid black;
+.display_none{
+  color: grey !important;
+  &:hover{
+    cursor: default !important;
+  }
 }
 
-.navbar_logo{
-  display: initial;
-}
-.navbar_links{
-  // background-color: grey;
-}
-.navbar02{
-}
-.link_item{
-  // border: black solid 1px !important;
+.slide{
+  border: 1px solid black;
 }
 
-.div_slider_wrapper  .slider .slide{
-      border: 1px solid black;
-}
-.stack_footer
-{
-  // border: 1px solid black;
+
+section#stack{
+  section#stack{
+    ul{
+      display: none !important;
+    }
+  }
 }

@@ -28,6 +28,10 @@ body
     }
     background-color: black;
     margin-bottom: 0;
-  }
 
+    li{
+      @include std_prop.box-shadow;
+      @include std_prop.padding;
+    }
+  }
 }
