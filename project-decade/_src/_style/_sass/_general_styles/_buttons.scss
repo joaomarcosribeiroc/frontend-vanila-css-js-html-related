@@ -1,0 +1,38 @@
+@use '../_partials_library/standardized_properties' as std-prop;
+@use 'colors';
+
+//GENERAL
+*{
+  transition: all 0.4s;
+}
+
+//Buttons
+.active-btn{
+  @include std-prop.border-radius;
+
+  display: inline;
+  padding: .5em 1em;
+
+  cursor: pointer;
+
+  color: white;
+  border: colors.$primary_color;
+  background-color: colors.$primary_color;
+
+  &:hover{
+    color: white;
+    background-color: colors.$primary_color;
+  }
+  &:focus{
+  }
+}
+
+.disabled-btn, .disabled-btn:hover{
+  @extend .active-btn;
+  color: darken(colors.$disabled_color, 10);
+  border: darken(colors.$disabled_color, 10);
+  background-color: lighten(colors.$disabled_color, 10);
+  cursor: default;
+}
+
+//Forms

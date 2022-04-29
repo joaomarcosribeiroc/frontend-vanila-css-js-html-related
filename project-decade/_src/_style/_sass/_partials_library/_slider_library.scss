@@ -1,0 +1,211 @@
+///This file define slider styles to be reutilized and personalisable
+
+//HTML minimum recommended HTML structure
+// <div class="slider-wrap">
+//   <div class="indicators-wrap">
+//     <div class="indicators">
+//       <a href="#slide-1">1</a>
+//     </div>
+//   </div>
+//   <div class="slider_s1">
+//     <div class="slide_s1" id="slide-1">Slide Data 1</div>
+//   </div>
+// </div>
+
+///Mixin for configuring classes
+
+@mixin slider_s1(
+  $slide_width: 400px,
+  $slide_height: 400px,
+  $slide_indicators_alignment: center,
+  $slide_indicators_spacement: 5,
+  $bg_color_off: false
+) {
+
+  *{
+    box-sizing: content-box;
+  }
+
+  .slider_wrap_s1{
+    width: $slide_width;
+    height: $slide_height+($slide_height*0.1);
+    background-color: grey;
+
+    //Flexbox Layout module
+    display: inline-flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    align-items: center;
+
+  }
+  .slider_s1{
+    @if not $bg_color_off {
+      background-color: green;
+    }
+    width: $slide_width;
+    height: $slide_height;
+
+    overflow: hidden;
+    //Flexbox Layout module
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    //Scroll Snap module
+    scroll-behavior: smooth;
+  }
+  .slide_s1{
+    height: $slide_width;
+    width: $slide_height;
+    @if(not $bg_color_off){
+      background-color: blue;
+    }
+
+    //Flexbox Layout module
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .indicators_wrap_s1{
+
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    @if $slide_indicators_alignment == center{
+      justify-content: center;
+    }
+    @else if $slide_indicators_alignment == right{
+      justify-content: flex-end;
+    }
+    @else if $slide_indicators_alignment == left {
+      justify-content: flex-start;
+    }
+
+    .indicators_s1{
+      ///Indicators spacement
+      display: flex;
+      width: 95%*$slide_indicators_spacement/10;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}
+
+
+//Work over this classes
+// .indicators_wrap_s2
+// .indicators_s2
+// .slider_wrap_s2
+// .slider_s2
+// .slide_s2
+// .slide_s2_presentation
+// .slide_s2_content
+
+@mixin slider_s2(
+  $slide_width: 210px,
+  $slide_height: 130px,
+  $slide_indicators_alignment: center,
+  $slide_indicators_spacement: 5,
+  $bg_color_off: false,
+  $presentation_bg_color: green
+) {
+
+  .slider_wrap_s2{
+    //Flexbox Layout module
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+
+    width: $slide_width;
+    height: $slide_height;
+
+    @if not $bg_color_off{
+      background-color: grey;
+    }
+  }
+
+  .slider_s2{
+    @if not $bg_color_off {
+      background-color: green;
+    }
+
+    //Flexbox Layout module
+    display: flex;
+    flex-direction: row;
+    // justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: $slide_height;
+    // margin: 0 1em;
+    overflow: hidden;
+
+    //Scroll Snap module
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+
+
+    .slide_s2{
+      height:100%;
+      width: 100%;
+
+      @if(not $bg_color_off){
+        background-color: blue;
+      }
+
+      //Flexbox Layout module
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      flex-shrink: 0;
+
+      &:nth-child(1){
+      }
+
+      .slide_s2_presentation{
+        width: 30%;
+        height: 100%;
+        @if not $bg_color_off{
+          background-color: $presentation_bg_color;
+        }
+      }
+      .slide_s2_content{
+        width: 70%;
+        height: 100%;
+        overflow: hidden;
+      }
+    }
+  }
+
+
+  .indicators_wrap_s2{
+
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    @if $slide_indicators_alignment == center{
+      justify-content: center;
+    }
+    @else if $slide_indicators_alignment == right{
+      justify-content: flex-end;
+    }
+    @else if $slide_indicators_alignment == left {
+      justify-content: flex-start;
+    }
+
+    .indicators_s2{
+      ///Indicators spacement
+      display: flex;
+      width: 95%*$slide_indicators_spacement/10;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+}

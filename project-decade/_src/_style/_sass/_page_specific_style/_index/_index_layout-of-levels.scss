@@ -1,0 +1,35 @@
+@media screen and (min-width: 1200px) {
+
+  //FIRST LEVEL LAYOUT
+  .body-grid-container{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 60px 120px 80px;
+    grid-gap: 15px;
+
+    &>*{
+      grid-column: 1/13;
+    }
+
+    #navbar-l1{
+      grid-row:1/2;
+    }
+
+    #launch-l1{
+      grid-row: 2/16;
+    }
+
+    #cars-l1{
+      grid-row:16/32;
+    }
+
+    //SECOND LEVEL LAYOUT
+    #cars-l1{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 15px;
+      grid-auto-rows: minmax(min-content, max-content);
+      
+    }
+  }
+}

@@ -1,0 +1,29 @@
+//TYPOGRAPHY
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
+$font: Noto Sans JP, sans-serif;
+
+*{
+  font-family: $font;
+}
+//Headline
+h1{
+  font-family: Noto Sans JP;
+  font-weight: bold;
+  font-size: 30px
+}
+h2{
+  font-family: Noto Sans JP;
+  font-size: 25px
+}
+h3{
+  font-family: Noto Sans JP;
+  font-size: 20px
+}
+h4{
+  font-family: Noto Sans JP;
+  font-size: 17px
+}
+h5{
+  font-family: Noto Sans JP;
+  font-size: 13px
+}

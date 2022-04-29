@@ -1,0 +1,28 @@
+@media screen and (min-width: 1200px) {
+  .body-grid-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 60px 120px 80px;
+    grid-gap: 15px;
+  }
+  .body-grid-container > * {
+    grid-column: 1/13;
+  }
+  .body-grid-container #navbar-l1 {
+    grid-row: 1/2;
+  }
+  .body-grid-container #launch-l1 {
+    grid-row: 2/16;
+  }
+  .body-grid-container #cars-l1 {
+    grid-row: 16/32;
+  }
+  .body-grid-container #cars-l1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+    grid-auto-rows: minmax(min-content, max-content);
+  }
+}
+
+/*# sourceMappingURL=index_layout-of-levels.css.map */

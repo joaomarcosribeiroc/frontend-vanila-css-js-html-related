@@ -1,0 +1,33 @@
+//from design style guide
+@use 'buttons';
+@use 'colors';
+@use 'typography';
+
+@use '../_partials_library/simple_navbar' as navbar_library;
+@use '../_partials_library/slider_library' as slider_library;
+
+body{
+  padding: 0;
+  margin: 0;
+  a{
+    text-decoration: none;
+  }
+  font-family: typography.$font !important;
+}
+
+//From navbar library
+@include navbar_library.navbar_nv1 (
+  $navbar_nv1_thickness: 100%,
+  $navbar_nv1_bg_color: colors.$neutral_color01,
+  $font: typography.$font,
+);
+
+//From slider library
+@include slider_library.slider_s2(
+$slide_width: 210px*5,
+$slide_height: 130px*4,
+$slide_indicators_alignment: center,
+$slide_indicators_spacement: 5,
+$bg_color_off: true,
+$presentation_bg_color: colors.$neutral_color02,
+);

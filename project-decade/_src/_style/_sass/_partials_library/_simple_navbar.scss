@@ -1,0 +1,118 @@
+///The _navbar_nv1.scss is a partial file that provides
+/// @author João Marcos R. Carvalho
+
+@mixin navbar_nv1(
+
+$navbar_nv1_thickness: 20px,
+
+/// Define the background-color property of the navigation bar
+/// @type Color
+$navbar_nv1_bg_color: green,
+
+/// Define the box-shadow property of the navigation bar
+/// @type String
+$box_shadow_down: 0 2px 5px grey,
+
+/// Define the background-color property of the navigation bar
+/// @type String
+$font: arial,
+
+/// The color property for the navigation bar
+/// @type Color
+$font_color: white,
+
+/// The font-size property for the navigation bar
+/// @type Number
+$font_size: 20px,
+
+/// The weight for margin-margin property for the navigation bar
+/// @type Number
+$margin_bottom_weight: 1,
+
+/// Set the text-transform property of the navigation bar
+/// @type String
+$font_text_transform: lowercase,
+
+/// The font-family for the logo text
+/// @type String
+$logo_font: arial,
+
+/// @type String
+$logo_font_size: 50px,
+
+/// @type Boolean
+$logo_separator: true
+){
+  .navbar_nv1{
+    //Flexbox Layout modules: ;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items: center;
+
+    box-sizing:border-box;
+    width:100%;
+    height: $navbar_nv1_thickness;
+    padding: 5px 30px;
+    box-shadow:$box_shadow_down;
+    background-color: $navbar_nv1_bg_color;
+    text-transform: $font_text_transform;
+    margin-bottom: 10px*$margin_bottom_weight;
+
+    *{
+      font-family: $font;
+      font-size:$font_size;
+      color: $font_color;
+      padding-top: auto;
+      padding-bottom: auto;
+      order: 10;
+    }
+
+    .navbar_nv1_logo{
+      order: 1;
+      font-weight: bolder;
+      font-family: $logo_font;
+      font-size: $logo_font_size;
+      cursor: pointer;
+      width: auto;
+
+      @if $logo_separator {
+        padding-right: 5%;
+        border-right: 2px   solid;
+      }
+    }
+
+    .navbar_nv1_links{
+      order: 2;
+      list-style: none;
+      box-sizing: content-box;
+      padding: 15px 0;
+
+      .link_item{
+        display: inline-block;
+        transition: all 0.4s ease 0s;
+        padding: auto;
+        margin-left: 30px;
+        &:hover{
+          transform: scale(1.09);
+          cursor: pointer;
+        }
+      }
+    }
+
+    .important_buttons{
+      @extend .center_items_vertically;
+      display: flex;
+      justify-content: space-between;
+      box-sizing: content-box;
+      & *{
+        margin-left: 50px;
+      }
+    }
+
+    .center_items_vertically{
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+  }
+}

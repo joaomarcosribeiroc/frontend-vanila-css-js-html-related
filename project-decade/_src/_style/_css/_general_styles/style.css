@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap");
+* {
+  transition: all 0.4s;
+}
+
+.active-btn, .disabled-btn, .disabled-btn:hover {
+  border-radius: 0.5rem;
+  display: inline;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  color: white;
+  border: #c41d0e;
+  background-color: #c41d0e;
+}
+.active-btn:hover, .disabled-btn:hover {
+  color: white;
+  background-color: #c41d0e;
+}
+.disabled-btn, .disabled-btn:hover {
+  color: #858585;
+  border: #858585;
+  background-color: #b8b8b8;
+  cursor: default;
+}
+
+* {
+  font-family: Noto Sans JP, sans-serif;
+}
+
+h1 {
+  font-family: Noto Sans JP;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+h2 {
+  font-family: Noto Sans JP;
+  font-size: 25px;
+}
+
+h3 {
+  font-family: Noto Sans JP;
+  font-size: 20px;
+}
+
+h4 {
+  font-family: Noto Sans JP;
+  font-size: 17px;
+}
+
+h5 {
+  font-family: Noto Sans JP;
+  font-size: 13px;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Noto Sans JP, sans-serif !important;
+}
+body a {
+  text-decoration: none;
+}
+
+.navbar_nv1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 5px 30px;
+  box-shadow: 0 2px 5px grey;
+  background-color: #000000;
+  text-transform: lowercase;
+  margin-bottom: 10px;
+}
+.navbar_nv1 * {
+  font-family: Noto Sans JP, sans-serif;
+  font-size: 20px;
+  color: white;
+  padding-top: auto;
+  padding-bottom: auto;
+  order: 10;
+}
+.navbar_nv1 .navbar_nv1_logo {
+  order: 1;
+  font-weight: bolder;
+  font-family: arial;
+  font-size: 50px;
+  cursor: pointer;
+  width: auto;
+  padding-right: 5%;
+  border-right: 2px solid;
+}
+.navbar_nv1 .navbar_nv1_links {
+  order: 2;
+  list-style: none;
+  box-sizing: content-box;
+  padding: 15px 0;
+}
+.navbar_nv1 .navbar_nv1_links .link_item {
+  display: inline-block;
+  transition: all 0.4s ease 0s;
+  padding: auto;
+  margin-left: 30px;
+}
+.navbar_nv1 .navbar_nv1_links .link_item:hover {
+  transform: scale(1.09);
+  cursor: pointer;
+}
+.navbar_nv1 .important_buttons {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: content-box;
+}
+.navbar_nv1 .important_buttons * {
+  margin-left: 50px;
+}
+.navbar_nv1 .center_items_vertically, .navbar_nv1 .important_buttons {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.slider_wrap_s2 {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  width: 1050px;
+  height: 520px;
+}
+
+.slider_s2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 520px;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+.slider_s2 .slide_s2 {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+}
+.slider_s2 .slide_s2 .slide_s2_presentation {
+  width: 30%;
+  height: 100%;
+}
+.slider_s2 .slide_s2 .slide_s2_content {
+  width: 70%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.indicators_wrap_s2 {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+}
+.indicators_wrap_s2 .indicators_s2 {
+  display: flex;
+  width: 47.5%;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/*# sourceMappingURL=style.css.map */

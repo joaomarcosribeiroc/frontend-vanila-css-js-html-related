@@ -1,0 +1,16 @@
+@mixin border-radius{
+  border-radius: .5rem;
+}
+
+@mixin box-shadow{
+  box-shadow: 1px 1px 5px grey;
+}
+
+@mixin padding{
+  padding: 1em;
+}
+
+@mixin square($size){
+  width: 10*$size;
+  height: 10*$size;
+}
